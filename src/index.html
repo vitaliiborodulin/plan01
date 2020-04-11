@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-@@include('includes/page_head.html', { "title": "Главная" })
+@@include('html/head.html', { "title": "Главная" })
 
 <body>
-	@@include('includes/page_header.html')
 
-	<main>
-		<div class="wrapper">
-			<h1>Привет</h1>
-		</div>
-	</main>
+	@@include('html/header.html')
+	@@include('html/main.html')
+	@@include('html/footer.html')
 
-	@@include('includes/page_footer.html')
-	@@include('includes/page_bottom.html')
+	<script src="js/script.js"></script>
 </body>
 
 </html>

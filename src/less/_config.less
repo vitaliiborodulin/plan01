@@ -1,9 +1,27 @@
 // USER VARIABLES SECTION
 
-@accent:     orange; // Accent Color
-@fontsize:   16px; // Body Font Size
-@textcolor:  #333; // Text Color
+@accent: orange; // Accent Color
+@fontsize: 16px; // Body Font Size
+@textcolor: #333; // Text Color
 @mainfamily: 'Gotham Pro', sans-serif; // Main Font Family
+
+// MIXINS SECTION
+
+// usage, x is the pixel size needed: .font-size(x);
+.font-size(@sizeValue) {
+	@remValue: @sizeValue / 16;
+	@pxValue: (@sizeValue);
+	// font-size: ~"@{pxValue}px";
+	font-size:~"@{remValue}rem";
+}
+
+// usage, x is the pixel size needed: .line-height(x);
+.line-height(@sizeValue) {
+	@remValue: @sizeValue / 16;
+	@pxValue: (@sizeValue);
+	// line-height: ~"@{pxValue}px";
+	line-height:~"@{remValue}rem";
+}
 
 
 // FONTS LOAD SECTION
@@ -15,8 +33,8 @@
 	font-style: normal;
 	src: url('../fonts/GothamPro.eot');
 	src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/GothamPro.woff') format('woff'),
-	url('../fonts/GothamPro.ttf') format('truetype');
+		url('../fonts/GothamPro.woff') format('woff'),
+		url('../fonts/GothamPro.ttf') format('truetype');
 }
 
 @font-face {
@@ -26,8 +44,8 @@
 	font-style: normal;
 	src: url('../fonts/GothamPro-Bold.eot');
 	src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/GothamPro-Bold.woff') format('woff'),
-	url('../fonts/GothamPro-Bold.ttf') format('truetype');
+		url('../fonts/GothamPro-Bold.woff') format('woff'),
+		url('../fonts/GothamPro-Bold.ttf') format('truetype');
 }
 
 @font-face {
@@ -37,8 +55,8 @@
 	font-style: normal;
 	src: url('../fonts/GothamPro-Black.eot');
 	src: url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/GothamPro-Black.woff') format('woff'),
-	url('../fonts/GothamPro-Black.ttf') format('truetype');
+		url('../fonts/GothamPro-Black.woff') format('woff'),
+		url('../fonts/GothamPro-Black.ttf') format('truetype');
 }
 
 
@@ -46,12 +64,14 @@
 
 .reset();
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
 .wrapper {
-    .wrapper();
+	.wrapper();
 }
 
 ::placeholder {
@@ -63,10 +83,17 @@
 	color: #fff;
 }
 
-input, textarea {
+input,
+textarea {
 	outline: none;
-	&:focus:required:invalid { border-color: red }
-	&:required:valid { border-color: green }
+
+	&:focus:required:invalid {
+		border-color: red
+	}
+
+	&:required:valid {
+		border-color: green
+	}
 }
 
 body {
@@ -83,6 +110,6 @@ body {
 // IMPORT SECTION
 
 @import "smart-grid.less";
-@import (less) '../../node_modules/imagelightbox/dist/imagelightbox.min.css';
+// @import (less) '../../node_modules/imagelightbox/dist/imagelightbox.min.css';
 // @import  '../../node_modules/slick-carousel/slick/slick.less';
 // @import  '../../node_modules/slick-carousel/slick/slick-theme.less';
