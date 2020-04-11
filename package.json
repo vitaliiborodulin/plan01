@@ -31,8 +31,6 @@
     "smart-grid": "^2.1.2"
   },
   "dependencies": {
-    "imagelightbox": "^1.0.2",
-    "inputmask": "^5.0.3",
     "jquery": "^3.4.1"
   }
 }
