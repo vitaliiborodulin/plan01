@@ -101,7 +101,11 @@ function styles() {
 		.pipe(preprocessor())
 		.pipe(gcmq())
 		.pipe(gulpif(isProd, autoprefixer({
-			overrideBrowserslist: ['last 10 versions'],
+			overrideBrowserslist: [
+        "last 2 version",
+        "not dead",
+        "not ie <= 11"
+      ],
 		})))
 		.pipe(gulpif(isProd, cleanCss({
 			level: 2
