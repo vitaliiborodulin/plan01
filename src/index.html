@@ -1,10 +1,79 @@
-@@include('html/head.html', { "title": "Главная" })
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
-<body>
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.ico"/>
 
-	@@include('html/header.html')
-	@@include('html/main.html')
-	@@include('html/footer.html')
+    <title>Изготовление планов эвакуации при пожаре</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="top">
+  <!-- шапка -->
+  @@include('html/header.html')
+  <!-- end шапка -->
+
+  <!-- кривая -->
+  @@include('html/subheader.html')
+  <!-- end кривая -->
+
+  <!-- hero -->
+  @@include('html/hero.html')
+  <!-- end hero -->
+
+  <!-- наши преимущества -->
+  @@include('html/advantage.html')
+  <!-- end наши преимущества -->
+
+  <!-- учреждения -->
+  @@include('html/buildings.html')
+  <!-- end учреждения -->
+
+  <!-- проверяет инспектор -->
+  @@include('html/inspector.html')
+  <!-- end проверяет инспектор -->
+
+  <!-- какие данные -->
+  @@include('html/data.html')
+  <!-- end какие данные -->
+
+  <!-- избегайте штрафов -->
+  @@include('html/punishment.html')
+  <!-- end избегайте штрафов -->
+
+  <!-- разрешительная документация -->
+  @@include('html/documentation.html')
+  <!-- end разрешительная документация -->
+
+  <!-- рекомендации -->
+  @@include('html/reviews.html')
+  <!-- end рекомендации -->
+
+  <!-- немного информации -->
+  @@include('html/some-info.html')
+  <!-- end немного информации -->
+
+  <!-- виды работ -->
+  @@include('html/jobs.html')
+  <!-- end виды работ -->
+
+  <!-- бонус -->
+  @@include('html/bonus.html')
+  <!-- end бонус -->
+
+  <!-- footer -->
+  @@include('html/footer.html')
+  <!-- end footer -->
+
+  <!-- popup -->
+  @@include('html/popup.html')
+  <!-- end popup -->
 
 	<script src="js/script.js"></script>
 </body>

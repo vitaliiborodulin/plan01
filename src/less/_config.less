@@ -1,64 +1,10 @@
 // USER VARIABLES SECTION
 
-@accent: orange; // Accent Color
-@fontsize: 16px; // Body Font Size
-@textcolor: #333; // Text Color
-@mainfamily: 'Gotham Pro', sans-serif; // Main Font Family
-
-// MIXINS SECTION
-
-// usage, x is the pixel size needed: .font-size(x);
-.font-size(@sizeValue) {
-	@remValue: @sizeValue / 16;
-	@pxValue: (@sizeValue);
-	// font-size: ~"@{pxValue}px";
-	font-size:~"@{remValue}rem";
-}
-
-// usage, x is the pixel size needed: .line-height(x);
-.line-height(@sizeValue) {
-	@remValue: @sizeValue / 16;
-	@pxValue: (@sizeValue);
-	// line-height: ~"@{pxValue}px";
-	line-height:~"@{remValue}rem";
-}
-
-
-// FONTS LOAD SECTION
-
-@font-face {
-	font-family: 'Gotham Pro';
-	font-weight: 400;
-	font-display: swap;
-	font-style: normal;
-	src: url('../fonts/GothamPro.eot');
-	src: url('../fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/GothamPro.woff') format('woff'),
-		url('../fonts/GothamPro.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Gotham Pro';
-	font-weight: 700;
-	font-display: swap;
-	font-style: normal;
-	src: url('../fonts/GothamPro-Bold.eot');
-	src: url('../fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/GothamPro-Bold.woff') format('woff'),
-		url('../fonts/GothamPro-Bold.ttf') format('truetype');
-}
-
-@font-face {
-	font-family: 'Gotham Pro';
-	font-weight: 900;
-	font-display: swap;
-	font-style: normal;
-	src: url('../fonts/GothamPro-Black.eot');
-	src: url('../fonts/GothamPro-Black.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/GothamPro-Black.woff') format('woff'),
-		url('../fonts/GothamPro-Black.ttf') format('truetype');
-}
-
+@accent: #fec800; // Accent Color
+@accent2: #e70000; // Accent Color
+@fontsize: 18px; // Body Font Size
+@textcolor: #000; // Text Color
+@mainfamily: 'PT Sans Narrow', sans-serif; // Main Font Family
 
 // GENERAL DOCUMENT STYLES
 
@@ -79,7 +25,7 @@
 }
 
 ::selection {
-	background-color: @accent;
+	background-color: @accent2;
 	color: #fff;
 }
 
@@ -92,24 +38,29 @@ textarea {
 	}
 
 	&:required:valid {
-		border-color: green
+		border-color: red
 	}
 }
 
 body {
 	font-size: @fontsize;
 	min-width: 320px;
-	position: relative;
-	line-height: 1.65;
+  position: relative;
+  // z-index: 1;
+	// line-height: 1.65;
 	font-family: @mainfamily;
 	font-weight: 400;
-	overflow-x: hidden;
-	color: @textcolor;
+	// overflow-x: hidden;
+  color: @textcolor;
+  letter-spacing: 0.01em;
 }
 
 // IMPORT SECTION
 
 @import "smart-grid.less";
-// @import (less) '../../node_modules/imagelightbox/dist/imagelightbox.min.css';
+@import (less) '../../node_modules/imagelightbox/dist/imagelightbox.min.css';
+@import (less)  '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+@import (less)  '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
+@import (less) '../../node_modules/animate.css/animate.css';
 // @import  '../../node_modules/slick-carousel/slick/slick.less';
 // @import  '../../node_modules/slick-carousel/slick/slick-theme.less';

@@ -1,0 +1,46 @@
+.bonus {
+  padding-top: 122px;
+  padding-bottom: 162px;
+  background: url('../img/bonus-bg.png') no-repeat center/cover;
+  overflow: hidden;
+  // min-height: 450px;
+}
+
+.bonus__wrapper {
+  position: relative;
+  height: 254px;
+  display: flex;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  align-items: center;
+  .xl-block({
+    justify-content: center;
+    align-items: flex-end;
+    // flex-direction: column;
+    // justify-content: center;
+  });
+}
+
+.bonus__btn{
+  position: relative;
+  width: 270px;
+  // margin-right: 31px;
+  // order: -1;
+  .xl-block({
+    // order: initial;
+
+    // margin-right: 0;
+  });
+
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    bottom: -58px;
+    left: 40px;
+    background: url('../img/icons-curved-arrow.png') no-repeat center;
+    width: 229px;
+    height: 45px;
+  }
+}
+

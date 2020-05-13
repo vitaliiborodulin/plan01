@@ -1,0 +1,42 @@
+.buildings {
+  padding-top: 114px;
+  padding-bottom: 60px;
+  background: url('../img/buildings-bg.png') no-repeat center/cover;
+}
+
+.buildings__title{
+  margin-bottom: 43px;
+}
+
+.buildings__wrapper {
+  .row-flex();
+  justify-content: space-between;
+  .md(justify-content, center);
+}
+
+.buildings__list {
+  .col();
+  .size(4);
+  // .size-md(8);
+  .size-sm(12);
+  max-width: 379px;
+
+  li {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 55px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 27px;
+      height: 26px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url('../img/icons-checkmark.png') no-repeat center;
+    }
+  }
+}
+
