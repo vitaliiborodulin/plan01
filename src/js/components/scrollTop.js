@@ -1,4 +1,4 @@
-var $links = $('.header__menu a');
+var $links = $('.header__menu .header__item a');
 var menu = $('.header__menu');
 
     $links.on('click', function(e){
