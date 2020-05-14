@@ -6,8 +6,6 @@ const { src, dest, watch, task, series,	parallel} = require("gulp");
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 
-const fileinclude = require('gulp-file-include');
-
 const autoprefixer = require('gulp-autoprefixer');
 const preprocessor = require('gulp-less');
 const cleanCss = require('gulp-clean-css');
@@ -65,12 +63,8 @@ var path = {
 
 // Сборка HTML
 function html() {
-	return src(path.src.html)
-		.pipe(fileinclude({
-			prefix: '@@',
-			basepath: '@file',
-			indent: true,
-      }))
+  return src(path.src.html)
+    .pipe(rigger())
     .pipe(size({showFiles: true, title: 'html'}))
 		.pipe(dest(path.build.html))
 		.pipe(gulpif(isSync, browserSync.stream()))

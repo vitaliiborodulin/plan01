@@ -12,6 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  .xl(justify-content, center);
   align-items: center;
 }
 
@@ -20,6 +21,7 @@
   padding: 5px;
   margin-bottom: 90px;
   width: 512px;
+  .md(width, 100%);
   min-height: 120px;
 
   display: flex;
@@ -29,6 +31,11 @@
   border-radius: 5px;
   background-color: #f0f0f0;
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.18);
+  transition: background-color 0.3s;
+
+  &:hover, &:active, &:focus {
+    background-color: #fff;
+  }
 
   &::after {
     position: absolute;
@@ -40,28 +47,70 @@
     top: 50%;
     transform: translateY(-50%);
     background: url('../img/scheme-arrow-right.png') no-repeat center;
+    .xl-block({
+      right: 50%;
+      top: auto;
+      bottom: -62px;
+      transform:rotate(90deg);
+    })
+  }
+
+  &:nth-child(1) {
+    order: 0;
   }
 
   &:nth-child(2),
   &:nth-child(6) {
     &::after {
       right: 105px;
+      .xl(right, 50%);
       top: auto;
       bottom: -62px;
       transform:rotate(90deg);
     }
   }
 
+  &:nth-child(2) {
+    order: 1;
+  }
+
   &:nth-child(3){
     margin-left: auto;
     width: 473px;
+    .md(width, 100%);
     min-height: 187px;
+    order: 2;
+    .xl-block({
+      width: 512px;
+      order: 3;
+      margin-left: unset;
+    });
     &::after {
       right: auto;
       left: 28px;
+      .xl-block({
+        right: 50%;
+        left: auto;
+      });
       top: auto;
       bottom: -64px;
       transform:rotate(90deg);
+    }
+  }
+
+  &:nth-child(4){
+    order: 3;
+    margin-left: 10px;
+    width: 473px;
+    .xl-block({
+      width: 512px;
+      order: 2;
+      margin-left: 0;
+    });
+    .md(width, 100%);
+    min-height: 187px;
+    &::after {
+      display: none;
     }
   }
 
@@ -70,30 +119,37 @@
     min-height: 153px;
   }
 
-  &:nth-child(4){
-    margin-left: 10px;
-    width: 473px;
-    min-height: 187px;
-    &::after {
-      display: none;
-    }
-  }
+  &:nth-child(5) {order: 4}
+  &:nth-child(6) {order: 5}
+  &:nth-child(7) {order: 6}
 
   &:nth-child(8){
     width: 767px;
-    min-height: 187px;
+    .md(width, 100%);
+    order: 8;
     margin-left: auto;
     margin-bottom: 0;
+    min-height: 187px;
+    .xl-block({
+      order: 7;
+      margin-left: unset;
+      margin-bottom: 90px;
+    });
     &::after {
       right: auto;
       left: -58px;
       transform:rotate(180deg) translateY(50%);
+      .xl-block({
+        left: auto;
+        transform:rotate(90deg);
+      })
     }
   }
 }
 
 .scheme__number {
   font-size: 84px;
+  .xs(font-size, 50px);
   color: @accent;
 }
 
@@ -101,9 +157,15 @@
   text-align: center;
   font-size: 24px;
   line-height: 34px;
+  .xs-block({
+    font-size: 20px;
+    line-height: 28px;
+  });
   letter-spacing: 0.05em;
 }
 
 .scheme__btn {
+  order: 7;
+  .xl(order, 8);
   width: 250px;
 }

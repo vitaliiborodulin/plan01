@@ -11,6 +11,7 @@
 
 		<p>	Имя: '.$_POST['name'].'</p>
 		<p>	Телефон: '.$_POST['tel'].'</p>
+		<p>	Количество: '.$_POST['number'].'</p>
 		<p>	Откуда: '.$_POST['form_zakaz_where'].'</p>
 
 
