@@ -1,0 +1,41 @@
+.when {
+  padding-top: 94px;
+  padding-bottom: 42px;
+}
+
+.when__title{
+  margin-bottom: 44px;
+}
+
+.when__wrapper {
+  .row-flex();
+  justify-content: center;
+}
+
+.when__list {
+  .col();
+  .size(4);
+  // .size-md(8);
+  .size-md(12);
+  max-width: 375px;
+
+  li {
+    font-size: 24px;
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 55px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 27px;
+      height: 26px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url('../img/icons-checkmark.png') no-repeat center;
+    }
+  }
+}
+
