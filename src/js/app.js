@@ -1,4 +1,3 @@
-//= ../../node_modules/jquery/dist/jquery.min.js
 //= ../../node_modules/wowjs/dist/wow.min.js
 //= ../../node_modules/jquery.maskedinput/src/jquery.maskedinput.js
 //= ../../node_modules/imagelightbox/dist/imagelightbox.min.js
