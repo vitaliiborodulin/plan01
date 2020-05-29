@@ -15,5 +15,6 @@ $(function(){
   //= components/footerArrow.js
   //= components/popup.js
   //= components/form.js
+  //= components/calc.js
 
 });

@@ -6,11 +6,32 @@
           <div class="popup-form__text">Введите данные, мы свяжемся с Вами <br> в ближайшее время!</div>
           <input class="popup-form__input" type="text" name="name" placeholder="Введите ваше имя" required>
           <input class="popup-form__input" type="tel" name="tel" placeholder="Введите ваш телефон" required>
-          <input class="popup-form__input" type="number" name="number" placeholder="Введите количество планов" min="1" required>
           <label>
             <input type="checkbox" name="privacy">Согласие на обработку персональных данных
           </label>
           <input class="popup-hidden" type="hidden" name="form_zakaz_where" value="">
+          <input class="btn popup-form__btn" type="submit" value="Заказать">
+      </form>
+  </div>
+</div>
+
+<div class="popup-overlay popup-calc">
+  <div class="popup-wrapper">
+      <form class="popup-form" action="calc.php" method="POST" >
+          <div class="popup-form__close">&times;</div>
+          <div class="popup-form__header">Изготовление планов эвакуации</div>
+          <div class="popup-form__text">Введите данные, мы свяжемся с Вами <br> в ближайшее время!</div>
+          <input class="popup-form__input" type="text" name="name" placeholder="Введите ваше имя" required>
+          <input class="popup-form__input" type="tel" name="tel" placeholder="Введите ваш телефон" required>
+
+          <input type="hidden" name="riding" value="">
+          <input type="hidden" name="rooms" value="">
+          <input type="hidden" name="eplan" value="">
+          <input type="hidden" name="moscow" value="">
+          <input type="hidden" name="price" value="">
+          <label>
+            <input type="checkbox" name="privacy">Согласие на обработку персональных данных
+          </label>
           <input class="btn popup-form__btn" type="submit" value="Заказать">
       </form>
   </div>

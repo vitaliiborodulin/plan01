@@ -10,6 +10,8 @@ $('.popup').on('click', function (e) {
   $('body').css('overflow', 'hidden');
 });
 
+
+
 $('.popup-form__close').on('click', function (e) {
   $('.popup-overlay').hide();
   $('body').css('overflow', 'initial');
@@ -31,7 +33,6 @@ $('#inspector-journals').on('click', function (e) {
   $('.popup-journals').show();
   $('body').css('overflow', 'hidden');
 });
-
 
 $(document).mouseup(function (e){ // событие клика по веб-документу
   var div = $(".popup-wrapper"); // тут указываем элемент

@@ -3,73 +3,41 @@
     <h2 class="section__title price__title">Наши цены ниже рыночных</h2>
     <div class="price__subtitle">Каждая 21-ая категория в подарок!</div>
 
-    <div class="price__wrapper">
+      <div class="price__calc">
+        <h3 class="price__header">Калькулятор стоимости расчёта категорий помещений</h3>
 
-      <div class="price__box">
-        <h3 class="price__header" data-wow-delay="0.5s">Дистанционный расчет</h3>
-        <div class="price__list">
-
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе одного помещения</h4>
-              <div class="price__money">2990 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Дист1">Заказать расчет</a>
+        <div class="riding__box">
+          <div>
+            <input type="radio" id="go" name="price__riding">
+            <label for="go">Требуется выезд</label>
           </div>
 
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе от 2 до 5 помещений</h4>
-              <div class="price__money">2490 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Дист25">Заказать расчет</a>
+          <div>
+            <input type="radio" id="remote" name="price__riding" checked>
+            <label for="remote">Всю информацию предоставим удаленно</label>
           </div>
-
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе от 5 помещений</h4>
-              <div class="price__money">2000 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Дист5">Заказать расчет</a>
-          </div>
-
         </div>
 
-      </div><!-- end price__box -->
-
-      <div class="price__box">
-        <h3 class="price__header" data-wow-delay="1s">Выездной расчет</h3>
-        <div class="price__list">
-
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе одного помещения</h4>
-              <div class="price__money">4990 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Выезд1">Заказать расчет</a>
-          </div>
-
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе от 2 до 5 помещений</h4>
-              <div class="price__money">2990 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Выезд25">Заказать расчет</a>
-          </div>
-
-          <div class="price__item">
-            <div class="price__calc">
-              <h4>При заказе от 5 помещений</h4>
-              <div class="price__money">2700 руб.</div>
-            </div>
-            <a href="#" class="btn price__btn popup" data-target="Выезд5">Заказать расчет</a>
-          </div>
-
+        <div>
+          <label for="price__rooms">Укажите количество помещений для категорирования (если вам известно)</label>
+          <input type="number" name="price__rooms" id="price__rooms" value="1" min="1">
         </div>
 
-      </div><!-- end price__box -->
+        <p>
+          <input type="checkbox" name="price__eplan" id="price__eplan">
+          <label for="price__eplan">Имеется планировка помещений в электронном виде</label>
+        </p>
 
-    </div><!-- end price__wrapper -->
+        <p>
+          <input type="checkbox" name="price__moscow" id="price__moscow">
+          <label for="price__moscow">Объект находится в Москве внутри МКАД</label>
+        </p>
+
+        <div class="price__total"><b>Общая стоимость</b> <span>0</span> руб.</div>
+        <div class="price__remark">* Для получения дополнительной скидки оставьте заявку и наш менеджер Вас проконсультирует</div>
+        <a href="#" class="btn price__btn popup" data-target="Калькулятор" id="popup-calc">Оставьте заявку</a>
+      </div>
+
 
   </div>
 </section>

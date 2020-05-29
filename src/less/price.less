@@ -14,97 +14,136 @@
   color: @accent;
 }
 
-.price__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  // .row-flex();
-  justify-content: space-between;
-  .xl(justify-content, center);
+.price__calc {
+  margin: 0 auto;
+  margin-bottom: 27px;
+  padding: 31px 44px 68px;
+  .xs-block({
+    padding: 31px 17px 60px;
+  });
+  max-width: 770px;
+
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.18);
+  transition: background-color .3s;
 }
 
-// .price__box {
-  // .col();
-  // .size(6);
-  // .size-md(8);
-  // .size-xs(12);
-// }
-
 .price__header {
-  position: relative;
-  z-index: 3;
-
-  margin-bottom: 47px;
-  font-size: 24px;
+  margin-bottom: 30px;
+  font-size: 18px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-
-  &::after {
-    position: absolute;
-    display: block;
-    content: '';
-    top: 50%;
-    transform: translateY(-50%);
-    left: 60px;
-    .sm(left, -45px);
-    width: 301px;
-    max-width: 100%;
-    height: 83px;
-    background: url('../img/brush.png') no-repeat center;
-    z-index: -1;
-  }
 }
 
-.price__box {
+.price__calc p {
+  // text-align: right;
+  margin-bottom: 20px;
+}
+
+.price__calc .riding__box {
   margin-bottom: 32px;
-}
 
-.price__item {
-  margin-bottom: 27px;
-  padding: 10px;
-  width: 536px;
-  .xs(width, 300px);
-  min-height: 118px;
-
-  .row-flex();
-  justify-content: space-between;
-  .lg(justify-content, center);
-  align-items: center;
-
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.18);
-  transition: background-color 0.3s;
-
-  &:hover, &:active, &:focus {
-    background-color: #fff;
+  div:first-child {
+    margin-right: 20px;
   }
 }
 
-.price__calc {
-  .col();
-  .size(6);
-  .size-lg(8);
-  .size-md(12);
-  margin-bottom: 14px;
-  // width: 276px;
-  text-align: center;
-  font-size: 24px;
+.price__calc > div:not(.price__remark) {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
 }
 
-.price__money {
-  margin-top: 14px;
-  font-weight: 700;
+.price__calc label{
+  display: flex;
+  font-size: 18px;
+  .xs(font-size, 15px);
+  color: #000000;
+  margin-bottom: 0;
+}
+
+
+.price__calc input[type=checkbox],
+.price__calc input[type=radio] {
+  display: none;
+}
+
+.price__calc p input[type=checkbox] + label:after,
+.price__calc > div > div input[type=radio] + label:before {
+  content: "\2714";
+  color: transparent;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 22px;
+  // margin: -5px 0px 0 0;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  vertical-align: middle;
+  transition: color ease .3s;
+}
+
+.price__calc p input[type=checkbox] + label:after {
+  margin-left: auto;
+}
+.price__calc > div > div input[type=radio] + label:before {
+  margin-right: 35px;
+  .md(margin-right, 10px);
+}
+
+.price__calc input[type=checkbox]:checked + label:after,
+.price__calc > div > div input[type=radio]:checked + label:before {
+  color: @accent;
+  border-color: #000;
+}
+
+input#price__rooms {
+  width: 54px;
+  height: 25px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #3f3f3f;
+}
+
+
+.price__calc .price__total {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  font-size: 18px;
+
+  b {
+    text-transform: uppercase;
+  }
+
+  span {
+    margin-left: auto;
+    margin-right: 6px;
+    display: inline-block;
+    width: 130px;
+    padding: 0 10px;
+    font-weight: 700;
+    text-align: right;
+    border: 1px solid #3f3f3f;
+  }
+}
+
+.price__remark {
+  margin-bottom: 22px;
+  font-size: 14px;
+  text-align: center;
 }
 
 .price__btn {
-  .col();
-  .size(6);
-  .size-lg(8);
-  .size-md(12);
-  max-width: 170px;
-  padding: 14px 16px;
+  margin: 0 auto;
+  width: 250px;
+  .xs(width, 100%);
 }
+
 
 
